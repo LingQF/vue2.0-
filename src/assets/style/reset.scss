@@ -1,0 +1,103 @@
+ /* 移动端样式重置（常用标签）原则：就是reset 只是需要的一些，不是无脑一刀切 */
+ *,
+ ::before,
+ ::after {
+     box-sizing: border-box;
+ }
+
+ html {
+     touch-action: none;
+ }
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+ }
+
+ /* margin padding 重置*/
+ body,
+ ul,
+ dl,
+ dd,
+ p,
+ ol,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ table,
+ header,
+ nav,
+ footer,
+ section,
+ aside {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+     /* 禁止选中文字*/
+     -webkit-user-select: none;
+     /* iPhone 和 Android 的浏览器纵向 (Portrate mode) 和橫向 (Landscape mode) 模式皆有自动调整字体大小的功能。控制它的就是 CSS 中的 -webkit-text-size-adjust。关闭字体大小自动调整功能*/
+     -webkit-text-size-adjust: 100%;
+     -webkit-overflow-scrolling: touch;
+
+     /* iOS 9+ Safari开始支持 -apple-system 参数， Chrome 使用 BlinkMacSystemFont ，兼容 iOS ／ MacOS*/
+     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ a,
+ input,
+ button {
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+ }
+
+ input,
+ button {
+     -webkit-appearance: none;
+     border-radius: 0;
+     border: none;
+ }
+
+ input {
+     outline: none;
+ }
+
+ ul,
+ ol {
+     list-style: none;
+ }
+
+ li {
+     list-style: none;
+ }
+
+ img {
+     border: 0;
+     vertical-align: middle;
+     /*禁止保存或拷贝图像（IOS）根据需要设置*/
+     /*-webkit-touch-callout: none;*/
+ }
+
+ img[src=""],
+ img:not([src]) {
+     opacity: 0;
+ }
+
+ p {
+     word-wrap: break-word
+ }
+
+ div::-webkit-scrollbar {
+     width: 0;
+     display: none;
+ }

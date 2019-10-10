@@ -1,0 +1,58 @@
+/* 常用的类  */
+/* 多行省略号  */
+.mul-ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp: 2; */
+  /*-webkit-line-clamp用来限制在一个块元素显示的文本的行数。 
+  display: -webkit-box; 将对象作为弹性伸缩盒子模型显示 。
+  -webkit-box-orient 设置或检索伸缩盒对象的子元素的排列方式 。*/
+}
+
+/*单行省略号*/
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 遮罩 */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  overflow: hidden;
+  background-color:$uni-bg-color-mask;
+}
+/* 公用页面的wrap */
+.page-wrap{
+  background-color:$uni-bg-color;
+}
+/* 定位上下左右居中 */
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 定位上下居中 */
+
+.c-tb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 定位左右居中 */
+
+.c-lr {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
