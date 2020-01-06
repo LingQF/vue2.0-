@@ -1,29 +1,28 @@
 let vNoScroll = {}
 
 vNoScroll.install = function (Vue) {
-  Vue.directive('no-scroll', function (el, binding) {
-    let show = binding.value.showLayer
-    let parentEl = binding.value.parentEl
-    if (show) {
-      el.addEventListener('touchmove', function (event) {
-        event.preventDefault()
-      })
-      if (parentEl) {
+    Vue.directive('no-scroll', function (el, binding) {
+        let show = binding.value.showLayer
+        let parentEl = binding.value.parentEl
+        if (show) {
+            el.addEventListener('touchmove', function (event) {
+                event.preventDefault()
+            })
+            if (parentEl) {
         // 按需加载引入
         // default输出接口，可以用参数直接获得,使用具名输入的形式
         import('better-scroll').then(({
-          default: BScroll
+            default: BScroll
         }) => {
-          new BScroll(document.getElementById(parentEl));
+            new BScroll(document.getElementById(parentEl))
         })
-
-      }
-    } else {
-      el.removeEventListener('touchmove', function (event) {
-        event.preventDefault()
-      })
-    }
-  })
+            }
+        } else {
+            el.removeEventListener('touchmove', function (event) {
+                event.preventDefault()
+            })
+        }
+    })
 }
 export default vNoScroll
 

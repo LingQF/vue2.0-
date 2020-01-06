@@ -8,6 +8,10 @@ import './utils/rem'
 // 引入全局http请求函数
 import { httpReq } from './plugins/httpReq'
 
+// 引入调试插件
+// import VConsole from '../node_modules/vconsole/dist/vconsole.min.js'
+// new VConsole()
+
 // 引入全局组件注册
 import './components'
 
@@ -20,6 +24,6 @@ Vue.use(httpReq)
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  render: h => h(App)
+    router,
+    render: h => h(App)
 }).$mount('#app')
