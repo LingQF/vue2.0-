@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+      我是master
     <router-view/>
   </div>
 </template>
