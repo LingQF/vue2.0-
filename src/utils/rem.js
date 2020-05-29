@@ -1,21 +1,20 @@
 // 适配 视口设置1.0
-(function flexible(window, document) {
+(function flexible (window, document) {
   var docEl = document.documentElement
   var dpr = window.devicePixelRatio || 1
 
   // adjust body font size
-  function setBodyFontSize() {
+  function setBodyFontSize () {
     if (document.body) {
       document.body.style.fontSize = (12 * dpr) + 'px'
-    }
-    else {
+    } else {
       document.addEventListener('DOMContentLoaded', setBodyFontSize)
     }
   }
-  setBodyFontSize();
+  setBodyFontSize()
 
   // set 1rem = viewWidth / 3.75
-  function setRemUnit() {
+  function setRemUnit () {
     var rem = docEl.clientWidth / 3.75
     docEl.style.fontSize = rem + 'px'
   }
